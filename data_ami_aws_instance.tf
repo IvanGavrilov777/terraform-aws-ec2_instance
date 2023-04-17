@@ -5,4 +5,5 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "VM" {
   instance_type = "t2.micro"
   ami = data.aws_ami.ubuntu.id
+  key_name = "ivan-ec2"
 }
