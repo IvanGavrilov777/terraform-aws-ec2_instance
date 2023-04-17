@@ -2,7 +2,8 @@ data "aws_ami" "ubuntu" {
   most_recent = true
   
   filter {
-    name   = "Ubuntu Server 22.04 LTS (HVM), SSD Volume Type"
+    name   = "name"
+    value = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
   }
 }
 
