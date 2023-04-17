@@ -14,7 +14,10 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
+data "aws_key_pair" "search_for_key_pair" {}
+
 resource "aws_instance" "VM" {
   instance_type = "t2.micro"
   ami = data.aws_ami.ubuntu.id
+  key_name = data.aws_key_pair.search_for_key_pair.key_name
 }
