@@ -26,9 +26,16 @@ export AWS_REGION=<your AWS region>
 ```
 You can verify that variable are set when you run command `export` in same terminal.
 
-2. Create variable set (*only for Terraform Cloud runs*)
-
+2. Create variable set *(only for Terraform Cloud runs)*
 Please find detailed guide how to do it [here](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-create-variable-set).
+
+3. Add credential details directly in provider configuration block ***(highly not recommended)***
+```
+provider "aws" {
+  region = "<your_region>"
+  access_key = "<your AWS access key>"
+  secret_key = "<your AWS secret access key>"
+}
 
 ## Usage
 Module can be used in any terraform configuration files with the following example:
@@ -37,6 +44,15 @@ module "EC2_instance" {
 source = "github.com/IvanGavrilov777/terraform-module-aws_instance"
 }
 ```
-# Terraform Cloud section
+### Terraform Cloud section
 In case if you want to use this module in CLI-driven run in Terraform Cloud, you should add ***cloud block*** in your terraform block:
+```
+terraform {
+  cloud {
+    organization = "<name_of_your_organization"
+    workspaces {
+      name = "<name_of_your_workspace>"
+    }
+  }
+}
 ```
