@@ -36,7 +36,7 @@ provider "aws" {
   access_key = "<your AWS access key>"
   secret_key = "<your AWS secret access key>"
 }
-
+```
 ## Usage
 Module can be used in any terraform configuration files with the following example:
 ```
