@@ -49,7 +49,7 @@ In case if you want to use this module in CLI-driven run in Terraform Cloud, you
 ```
 terraform {
   cloud {
-    organization = "<name_of_your_organization"
+    organization = "<name_of_your_organization>"
     workspaces {
       name = "<name_of_your_workspace>"
     }
