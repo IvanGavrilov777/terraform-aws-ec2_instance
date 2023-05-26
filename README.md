@@ -1,4 +1,4 @@
-# terraform-module-aws_instance
+# terraform-aws-ec2_instance
 
 ## Purpose
 The purpose of this module is to deploy EC2 instance in AWS, using Terraform AWS provider
