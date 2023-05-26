@@ -20,9 +20,9 @@ To ensure proper authentication with AWS and location on EC2, module expects fol
 If you are using **localy Terraform open source** on MAC/Linux platform or with **Terraform Cloud CLI-driven run** you can achieve this by
 1. Run following commands in terminal:
 ```
-export AWS_ACCESS_KEY=<your AWS access key>
-export AWS_SECRET_ACCESS_KEY=<your AWS secret access key>
-export AWS_REGION=<your AWS region>
+export AWS_ACCESS_KEY=<your_AWS_access_key>
+export AWS_SECRET_ACCESS_KEY=<your_AWS_secret_access_key>
+export AWS_REGION=<your_AWS_region>
 ```
 You can verify that variable are set when you run command `export` in same terminal.
 
@@ -33,8 +33,8 @@ Please find detailed guide how to do it [here](https://developer.hashicorp.com/t
 ```
 provider "aws" {
   region = "<your_region>"
-  access_key = "<your AWS access key>"
-  secret_key = "<your AWS secret access key>"
+  access_key = "<your_AWS_access_key>"
+  secret_key = "<your_AWS_secret_access_key>"
 }
 ```
 ## Usage
