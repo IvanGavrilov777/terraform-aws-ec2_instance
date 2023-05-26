@@ -41,11 +41,11 @@ provider "aws" {
 Module can be used in any terraform configuration files with the following example:
 ```
 module "EC2_instance" {
-source = "github.com/IvanGavrilov777/terraform-module-aws_instance"
+source = "github.com/IvanGavrilov777/terraform-aws-ec2_instance"
 }
 ```
 ### Terraform Cloud section
-In case if you want to use this module in CLI-driven run in Terraform Cloud, you should add ***cloud block*** in your terraform block:
+In case if you want to use this module in CLI-driven run in Terraform Cloud, you should add ***cloud {} block*** in your terraform block:
 ```
 terraform {
   cloud {
