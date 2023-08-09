@@ -32,3 +32,4 @@ resource "aws_instance" "VM" {
 tags = {
   Name = "testVM"
 }
+}
