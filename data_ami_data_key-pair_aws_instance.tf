@@ -29,4 +29,6 @@ resource "aws_instance" "VM" {
   instance_type = var.ec2_type
   ami = data.aws_ami.ubuntu.id
   key_name = data.aws_key_pair.search_for_key_pair.key_name
+tags = {
+  Name = "testVM"
 }
